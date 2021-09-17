@@ -1,0 +1,894 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'C
+	/home/fakecrafter/.config
+	rofi
+1594235966
+'H
+	/home/fakecrafter/
+	..
+1594204921
+'b
+	/home/fakecrafter/bin/
+	..
+1594204921
+'c
+	/home/fakecrafter/CODING
+	PYTHON
+1598450854
+'d
+	/home/fakecrafter
+	Dokumente
+1601227311
+'h
+	/home/fakecrafter/
+	..
+1594204921
+'j
+	/home/fakecrafter/Downloads
+	..
+1600598943
+'q
+	/home/fakecrafter/.config/qtile
+	config.py
+1598450890
+'u
+	/home/fakecrafter
+	.vim
+1598033682
+'v
+	/home/fakecrafter/.config/nvim
+	settings
+1598450924
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/fakecrafter
+	.config
+4
+d/home/fakecrafter/.config
+	i3
+19
+d/home/fakecrafter/.config/i3
+	config
+1
+d/home/fakecrafter/.config
+	qtile
+33
+d/home/fakecrafter/.config/qtile
+	sxhkd
+4
+d/home/fakecrafter/.config/qtile/sxhkd
+	sxhkdrc
+1
+d/home/fakecrafter/.config/qtile
+	scripts
+3
+d/home/fakecrafter/.config/qtile/scripts
+	system-overview
+5
+d/home/fakecrafter/.config/qtile
+	icons
+2
+d/home/fakecrafter/.config/qtile/icons
+	battery_icons_horiz
+1
+d/home/fakecrafter/.config/qtile/icons/battery_icons_horiz
+	..
+0
+d/home/fakecrafter/.config/qtile/icons
+	..
+0
+d/home/fakecrafter/.config/qtile
+	__pycache__
+1
+d/home/fakecrafter/.config/qtile/__pycache__
+	config.cpython-38.pyc
+1
+d/home/fakecrafter/.config/qtile
+	config.py
+7
+d/home/fakecrafter/.config
+	i3
+19
+d/home/fakecrafter/.config/i3
+	config
+1
+d/home/fakecrafter/.config
+	i3
+19
+d/home/fakecrafter/.config/i3
+	config
+1
+d/home/fakecrafter/.config
+	mutt
+22
+d/home/fakecrafter/.config/mutt
+	accounts
+1
+d/home/fakecrafter/.config/mutt/accounts
+	1-mrzap_account.muttrc
+1
+d/home/fakecrafter/.config/mutt
+	accounts
+1
+d/home/fakecrafter/.config
+	neofetch
+24
+d/home/fakecrafter/.config/neofetch
+	config.conf
+27
+d/home/fakecrafter/.config
+	neofetch
+24
+d/home/fakecrafter/.config/neofetch
+	config.conf
+1
+d/home/fakecrafter/.config
+	bspwm
+4
+d/home/fakecrafter/.config/bspwm
+	..
+0
+d/home/fakecrafter/.config
+	vifm
+42
+d/home/fakecrafter/.config/vifm
+	vifm-help.txt
+3
+d/home/fakecrafter
+	.config
+4
+d/home
+	fakecrafter
+1
+d/
+	etc
+4
+d/etc
+	systemd
+42
+d/etc/systemd
+	system
+2
+d/etc/systemd/system
+	autoupdate.timer
+9
+d/home/fakecrafter
+	.gnupg
+5
+d/home/fakecrafter/CODING
+	PYTHON
+2
+d/home/fakecrafter/CODING/PYTHON
+	Learning.py
+3
+d/home/fakecrafter
+	.gnupg
+5
+d/home/fakecrafter/.config/nvim/vim-plug
+	plugins.vim
+1
+d/home/fakecrafter/.config/nvim
+	vim-plug
+3
+d/home/fakecrafter/CODING
+	PYTHON
+2
+d/home/fakecrafter/CODING/PYTHON
+	Learning.py
+3
+d/home/fakecrafter/CODING
+	PYTHON
+2
+d/home/fakecrafter
+	Dokumente
+21
+d/home/fakecrafter/Dokumente
+	DsiN_Passwortkarte.PDF
+8
+d/home/fakecrafter
+	CODING
+20
+d/home/fakecrafter/CODING
+	PYTHON
+2
+d/home/fakecrafter/CODING/PYTHON
+	__pycache__
+2
+d/home/fakecrafter/CODING/PYTHON/__pycache__
+	Learning.cpython-38.pyc
+1
+d/home/fakecrafter/CODING/PYTHON
+	Spiele
+1
+d/home/fakecrafter/CODING/PYTHON/Spiele
+	tic-tac-toe
+1
+d/home/fakecrafter/CODING/PYTHON
+	Spiele
+1
+d/home/fakecrafter/CODING
+	output
+3
+d/home/fakecrafter/CODING/output
+	TIC-TAC-TOE
+1
+d/home/fakecrafter/CODING
+	output
+3
+d/home/fakecrafter
+	CODING
+21
+d/home/fakecrafter/CODING
+	PYTHON
+2
+d/home/fakecrafter/CODING/PYTHON
+	__pycache__
+2
+d/home/fakecrafter/CODING/PYTHON/__pycache__
+	..
+0
+d/home/fakecrafter/CODING/PYTHON
+	Spiele
+1
+d/home/fakecrafter/CODING
+	PYTHON
+2
+d/home/fakecrafter
+	output
+17
+d/home/fakecrafter/output
+	..
+0
+d/home/fakecrafter
+	output
+17
+d/home/fakecrafter/.config/nvim
+	vim-plug
+3
+d/home/fakecrafter/.config/nvim/vim-plug
+	plugins.vim
+1
+d/home/fakecrafter/CODING/PYTHON
+	Learning.py
+4
+d/home/fakecrafter/.config/sxhkd
+	sxhkdrc
+1
+d/home/fakecrafter/.config
+	nvim
+26
+d/home/fakecrafter/.config/nvim
+	vim-plug
+3
+d/home/fakecrafter/.config/nvim/vim-plug
+	plugins.vim
+1
+d/home/fakecrafter/.config/nvim
+	vim-plug
+3
+d/home/fakecrafter/.config/nvim/vim-plug
+	plugins.vim
+1
+d/home/fakecrafter/.config/nvim
+	vim-plug
+3
+d/home/fakecrafter/.config/nvim/vim-plug
+	plugins.vim
+1
+d/home/fakecrafter/.config/nvim
+	settings.vim
+5
+d/home/fakecrafter/.config/nvim/vim-plug
+	plugins.vim
+1
+d/home/fakecrafter/CODING/PYTHON
+	__pycache__
+2
+d/home/fakecrafter/.config/nvim
+	settings.vim
+5
+d/home/fakecrafter/CODING/PYTHON
+	__pycache__
+2
+d/home/fakecrafter/.config/nvim
+	vim-plug
+3
+d/home/fakecrafter/.config/nvim/vim-plug
+	plugins.vim
+1
+d/home/fakecrafter/.config/nvim
+	plug-config
+2
+d/home/fakecrafter/.config/nvim/plug-config
+	coc.vim
+1
+d/home/fakecrafter/.config/nvim
+	vim-plug
+3
+d/home/fakecrafter
+	Dokumente
+4
+d/home/fakecrafter/Dokumente
+	Französisch
+4
+d/home/fakecrafter/Dokumente/Französisch
+	french_presentation.txt
+14
+d/home/fakecrafter/CODING/PYTHON
+	Klassen.py
+3
+d/home/fakecrafter/.config/nvim
+	settings.vim
+5
+d/home/fakecrafter/CODING/PYTHON
+	Spiele
+1
+d/home/fakecrafter/CODING/PYTHON/Spiele
+	spiel.py
+6
+d/home/fakecrafter/CODING/PYTHON
+	test.py
+9
+d/home/fakecrafter
+	..
+0
+d/home/fakecrafter/CODING
+	PYTHON
+2
+d/home/fakecrafter/CODING/PYTHON
+	Spiele
+1
+d/home/fakecrafter/CODING/PYTHON/Spiele
+	Galgenmännchen.py
+2
+d
+
+# Right window history (oldest to newest):
+D/home/fakecrafter/CODING
+	PYTHON
+2
+D/home/fakecrafter/CODING/PYTHON
+	Klassen.py
+2
+D/home/fakecrafter
+	.conkyrc
+28
+D/home
+	fakecrafter
+1
+D/home/fakecrafter
+	Bilder
+7
+D/home
+	fakecrafter
+1
+D/
+	usr
+17
+D/usr
+	share
+8
+D/usr/share
+	doc
+40
+D/usr/share/doc
+	polybar
+47
+D/usr/share/doc/polybar
+	config
+5
+D/usr/share/doc
+	polybar
+47
+D/usr/share/doc/polybar
+	config
+5
+D/usr/share/doc
+	polybar
+46
+D/usr/share
+	doc
+40
+D/usr
+	lib32
+4
+D/
+	var
+18
+D/var
+	lib
+5
+D/var/lib
+	pacman
+22
+D/var/lib/pacman
+	local
+1
+D/home/fakecrafter
+	.config
+4
+D/home/fakecrafter/.config
+	variety
+36
+D/home/fakecrafter/.config/variety
+	..
+0
+D/home/fakecrafter/.config
+	vifm
+37
+D/home/fakecrafter/.config/vifm
+	vifmrc
+5
+D/home/fakecrafter/.config
+	autostart
+10
+D/home/fakecrafter/.config/autostart
+	autostart.sh
+2
+D/home/fakecrafter/.config
+	polybar
+37
+D/home/fakecrafter/.config/polybar
+	config
+1
+D/home/fakecrafter/.config
+	nvim
+34
+D/home/fakecrafter/.config/nvim
+	settings.vim
+5
+D/home/fakecrafter/.config
+	nvim
+34
+D/home/fakecrafter
+	.config
+4
+D/home
+	fakecrafter
+1
+D/
+	bin
+1
+D/bin
+	adventure
+41
+D/
+	bin
+1
+D/home/fakecrafter
+	Downloads
+21
+D/home/fakecrafter/Downloads
+	..
+0
+D/home/fakecrafter
+	Downloads
+21
+D/home/fakecrafter/Downloads
+	DsiN_Passwortkarte.PDF
+1
+D/home/fakecrafter
+	.zshrc
+48
+D/home/fakecrafter/.config/nvim
+	vim-plug
+3
+D/home/fakecrafter/.config/nvim/vim-plug
+	plugins.vim
+1
+D/home/fakecrafter/.config/nvim
+	autoload
+1
+D/home/fakecrafter/.config/nvim/autoload
+	plugged
+1
+D/home/fakecrafter/.config/nvim/autoload/plugged
+	auto-pairs
+2
+D/home/fakecrafter/.config/nvim/autoload/plugged/auto-pairs
+	plugin
+3
+D/home/fakecrafter/.config/nvim/autoload/plugged/auto-pairs/plugin
+	auto-pairs.vim
+1
+D/home/fakecrafter/.config/nvim/autoload/plugged/auto-pairs
+	.gitignore
+4
+D/home/fakecrafter/.config/nvim/autoload/plugged
+	vim-sneak
+12
+D/home/fakecrafter/.config/nvim/autoload/plugged/vim-sneak
+	plugin
+4
+D/home/fakecrafter/.config/nvim/autoload/plugged/vim-sneak/plugin
+	sneak.vim
+1
+D/home/fakecrafter
+	Downloads
+7
+D/home/fakecrafter/Downloads
+	..
+0
+D/home/fakecrafter
+	.bin
+2
+D/home/fakecrafter/.bin
+	colortest-slim
+7
+D/home/fakecrafter
+	.config
+4
+D/home/fakecrafter/.config
+	nvim
+34
+D/home/fakecrafter/.config/nvim
+	vim-plug
+3
+D/home/fakecrafter/.config/nvim/vim-plug
+	plugins.vim
+1
+D/home/fakecrafter/.config/nvim
+	plug-config
+2
+D/home/fakecrafter/.config/nvim/plug-config
+	coc.vim
+1
+D/home/fakecrafter/.config/nvim
+	autoload
+1
+D/home/fakecrafter/.config/nvim/autoload
+	plugged
+1
+D/home/fakecrafter/.config/nvim/autoload/plugged
+	vim-polyglot
+11
+D/home/fakecrafter/.config/nvim/autoload
+	plug.vim
+2
+D/home/fakecrafter/.config/nvim
+	vim-plug
+3
+D/home/fakecrafter/.config/nvim/vim-plug
+	plugins.vim
+1
+D/home/fakecrafter/.config/nvim
+	vim-plug
+3
+D/home/fakecrafter/.config
+	coc
+4
+D/home/fakecrafter/.config/coc
+	extensions
+1
+D/home/fakecrafter/.config/coc/extensions
+	node_modules
+1
+D/home/fakecrafter/.config/coc/extensions/node_modules
+	coc-python
+4
+D/home/fakecrafter/.config/coc/extensions/node_modules/coc-python
+	..
+0
+D/home/fakecrafter/.config/coc/extensions/node_modules
+	coc-jedi
+2
+D/home/fakecrafter/.config/coc/extensions/node_modules/coc-jedi
+	LICENSE
+4
+D/home/fakecrafter/.config/coc/extensions/node_modules
+	coc-jedi
+2
+D/home/fakecrafter/.config/coc/extensions
+	node_modules
+1
+D/home/fakecrafter/.config/coc
+	extensions
+1
+D/home/fakecrafter/.config
+	ranger
+31
+D/home/fakecrafter/.config/ranger
+	..
+0
+D/home/fakecrafter/.config
+	vifm
+38
+D/home/fakecrafter/.config/vifm
+	vifmrc
+5
+D/home/fakecrafter/.config
+	nvim
+23
+D/home/fakecrafter/.config/nvim
+	vim-plug
+3
+D/home/fakecrafter/.config/nvim/vim-plug
+	plugins.vim
+1
+D/home/fakecrafter/.config/nvim
+	vim-plug
+3
+D/home/fakecrafter/.config
+	alacritty
+4
+D/home/fakecrafter/.config/alacritty
+	..
+0
+D/home/fakecrafter/.config
+	sxhkd
+45
+D/home/fakecrafter/.config/sxhkd
+	sxhkdrc
+1
+D/home/fakecrafter/.config/nvim
+	settings.vim
+5
+D/home/fakecrafter/.config
+	sxhkd
+37
+D/home/fakecrafter/.config/sxhkd
+	sxhkdrc
+1
+D/home/fakecrafter/CODING
+	PYTHON
+2
+D/home/fakecrafter/CODING/PYTHON
+	Learning.py
+4
+D/home/fakecrafter/.config/nvim
+	settings.vim
+5
+D/home/fakecrafter/CODING
+	PYTHON
+2
+D/home/fakecrafter/CODING/PYTHON
+	..
+0
+D
+
+# Command line history (oldest to newest):
+:q
+:nvim muttrc
+:!nvim muttrc
+:mkdir alacritty
+:mkfile solarized_dark.vifm
+:touch config.py
+:mkdir nvim
+:mkdir plugins
+:touch plugins.vim
+:mkdir .vim
+:mkdir plugged
+:touch init.vim
+:touch .vimrc
+:mkdir ~/.config/nvim/settings
+:mkdir settings
+:touch settings.vim
+:touch keys.vim
+:mkdir colors
+:touch gruvbox.vifm
+:mkdir bspwm
+:touch bspwmrc
+:mkdir sxh
+:mkdir sxhkd
+:touch update
+:touch autostart.sh
+:mkdir polybar
+:touch config
+:touch launch.sh
+:w
+:!sudo su
+:sudo
+:shell
+:touch autoupdate.timer
+:sudo touch autoupdate.timer
+:!sudo touch /etc/systemd/system/autoupdate.timer
+:touch test.py
+
+# Search history (oldest to newest):
+/aut
+/.zshr
+/gruv
+/nord
+/drac
+/mutt
+/qtile
+/sdb
+/is
+/irss
+/.zshrc
+/.vim
+/kar
+/ala
+/zsh
+/zs
+/bs
+/polybar
+/tmux
+/.config
+/themes
+/.confi
+/.con
+/nvi
+/dict
+/doc
+/polyb
+/poly
+/bsp
+/i3
+/pol
+/pfetch
+/vif
+/.zs
+/syst
+/coc
+/out
+/sx
+
+# Prompt history (oldest to newest):
+palacritty.yml
+pcolors_distrotube.vifm
+parcolinux_config.py
+pconfig.py
+p.init.vim
+pinit.vim
+pratespiel.py
+pCalculator.py
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/home/fakecrafter/.local/share/vifm/Trash/000___pycache__
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/fakecrafter/.local/share/vifm/Trash/000_set-pywal.sh
+	/home/fakecrafter/.config/qtile/scripts/set-pywal.sh
+t/home/fakecrafter/.local/share/vifm/Trash/000_config.py
+	/home/fakecrafter/.config/qtile/config.py
+t/home/fakecrafter/.local/share/vifm/Trash/000_settings
+	/home/fakecrafter/.config/nvim/settings
+t/home/fakecrafter/.local/share/vifm/Trash/000_plugins
+	/home/fakecrafter/.config/nvim/plugins
+t/home/fakecrafter/.local/share/vifm/Trash/000_init.vim
+	/home/fakecrafter/.config/nvim/init.vim
+t/home/fakecrafter/.local/share/vifm/Trash/000_vim-plug
+	/home/fakecrafter/.config/nvim/vim-plug
+t/home/fakecrafter/.local/share/vifm/Trash/000_.vscode
+	/home/fakecrafter/CODING/PYTHON/.vscode
+t/home/fakecrafter/.local/share/vifm/Trash/000_TinyCore-current.iso
+	/home/fakecrafter/Dokumente/iso/TinyCore-current.iso
+t/home/fakecrafter/.local/share/vifm/Trash/000_slax-32bit-9.11.0.iso
+	/home/fakecrafter/Dokumente/iso/slax-32bit-9.11.0.iso
+t/home/fakecrafter/.local/share/vifm/Trash/000_nbsdgames
+	/home/fakecrafter/nbsdgames
+t/home/fakecrafter/.local/share/vifm/Trash/000_bspwmrc
+	/home/fakecrafter/.config/bspwm/bspwmrc
+t/home/fakecrafter/.local/share/vifm/Trash/000_am-conky-session.desktop
+	/home/fakecrafter/.config/autostart/am-conky-session.desktop
+t/home/fakecrafter/.local/share/vifm/Trash/000_variety.desktop
+	/home/fakecrafter/.config/autostart/variety.desktop
+t/home/fakecrafter/.local/share/vifm/Trash/000_keys.vim
+	/home/fakecrafter/.config/nvim/settings/keys.vim
+t/home/fakecrafter/.local/share/vifm/Trash/000_git_learning
+	/home/fakecrafter/CODING/PYTHON/git_learning
+t/home/fakecrafter/.local/share/vifm/Trash/000_update
+	/home/fakecrafter/update
+t/home/fakecrafter/.local/share/vifm/Trash/000_python.py
+	/home/fakecrafter/python.py
+t/home/fakecrafter/.local/share/vifm/Trash/000_linuxmint-20-xfce-64bit.iso
+	/home/fakecrafter/Downloads/linuxmint-20-xfce-64bit.iso
+t/home/fakecrafter/.local/share/vifm/Trash/000_LabyMod3_Installer.jar
+	/home/fakecrafter/Downloads/LabyMod3_Installer.jar
+t/home/fakecrafter/.local/share/vifm/Trash/000_usbkurzanleitung.txt
+	/home/fakecrafter/Dokumente/usbkurzanleitung.txt
+t/home/fakecrafter/.local/share/vifm/Trash/000_Dark-Olympic.zip
+	/home/fakecrafter/Downloads/Dark-Olympic.zip
+t/home/fakecrafter/.local/share/vifm/Trash/000_16000_French_sentences_sorted_from_easiest_to_hardest_13.apkg
+	/home/fakecrafter/Downloads/16000_French_sentences_sorted_from_easiest_to_hardest_13.apkg
+t/home/fakecrafter/.local/share/vifm/Trash/000_Dark-Olympic
+	/home/fakecrafter/Downloads/Dark-Olympic
+t/home/fakecrafter/.local/share/vifm/Trash/000_config
+	/home/fakecrafter/.config/polybar/config
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-arc.png
+	/home/fakecrafter/.config/neofetch/arcolinux-arc.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-black.png
+	/home/fakecrafter/.config/neofetch/arcolinux-black.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-blue-dark.png
+	/home/fakecrafter/.config/neofetch/arcolinux-blue-dark.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-blue-darker.png
+	/home/fakecrafter/.config/neofetch/arcolinux-blue-darker.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-blue.png
+	/home/fakecrafter/.config/neofetch/arcolinux-blue.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-evopop.png
+	/home/fakecrafter/.config/neofetch/arcolinux-evopop.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-froly.png
+	/home/fakecrafter/.config/neofetch/arcolinux-froly.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-golden.png
+	/home/fakecrafter/.config/neofetch/arcolinux-golden.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-green.png
+	/home/fakecrafter/.config/neofetch/arcolinux-green.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-havelock.png
+	/home/fakecrafter/.config/neofetch/arcolinux-havelock.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-hibiscus.png
+	/home/fakecrafter/.config/neofetch/arcolinux-hibiscus.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-mandy.png
+	/home/fakecrafter/.config/neofetch/arcolinux-mandy.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-mantis.png
+	/home/fakecrafter/.config/neofetch/arcolinux-mantis.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-niagara.png
+	/home/fakecrafter/.config/neofetch/arcolinux-niagara.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-numix.png
+	/home/fakecrafter/.config/neofetch/arcolinux-numix.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-orchid.png
+	/home/fakecrafter/.config/neofetch/arcolinux-orchid.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-paper.png
+	/home/fakecrafter/.config/neofetch/arcolinux-paper.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-pink-violet.png
+	/home/fakecrafter/.config/neofetch/arcolinux-pink-violet.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-polo.png
+	/home/fakecrafter/.config/neofetch/arcolinux-polo.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-punch.png
+	/home/fakecrafter/.config/neofetch/arcolinux-punch.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-smoke.png
+	/home/fakecrafter/.config/neofetch/arcolinux-smoke.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-tacao.png
+	/home/fakecrafter/.config/neofetch/arcolinux-tacao.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-tory.png
+	/home/fakecrafter/.config/neofetch/arcolinux-tory.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux-white.png
+	/home/fakecrafter/.config/neofetch/arcolinux-white.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux.png
+	/home/fakecrafter/.config/neofetch/arcolinux.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_arcolinux.svg
+	/home/fakecrafter/.config/neofetch/arcolinux.svg
+t/home/fakecrafter/.local/share/vifm/Trash/000_medallion-blue.png
+	/home/fakecrafter/.config/neofetch/medallion-blue.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_medallion-bronze.png
+	/home/fakecrafter/.config/neofetch/medallion-bronze.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_medallion-gold.png
+	/home/fakecrafter/.config/neofetch/medallion-gold.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_medallion-silver.png
+	/home/fakecrafter/.config/neofetch/medallion-silver.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_medallion-white.png
+	/home/fakecrafter/.config/neofetch/medallion-white.png
+t/home/fakecrafter/.local/share/vifm/Trash/000_DsiN_Passwortkarte.txt
+	/home/fakecrafter/Downloads/DsiN_Passwortkarte.txt
+t/home/fakecrafter/.local/share/vifm/Trash/000_Learning.cpython-38.pyc
+	/home/fakecrafter/CODING/PYTHON/__pycache__/Learning.cpython-38.pyc
+t/home/fakecrafter/.local/share/vifm/Trash/000_Learning.spec
+	/home/fakecrafter/Learning.spec
+t/home/fakecrafter/.local/share/vifm/Trash/000_Learning
+	/home/fakecrafter/output/Learning
+t/home/fakecrafter/.local/share/vifm/Trash/000_test.py
+	/home/fakecrafter/CODING/PYTHON/test.py
+t/home/fakecrafter/.local/share/vifm/Trash/000_mittelpunkt.py
+	/home/fakecrafter/CODING/PYTHON/mittelpunkt.py
+t/home/fakecrafter/.local/share/vifm/Trash/000_bubblesort.py
+	/home/fakecrafter/CODING/PYTHON/bubblesort.py
+t/home/fakecrafter/.local/share/vifm/Trash/000___pycache__
+	/home/fakecrafter/CODING/PYTHON/__pycache__
+
+# State:
+f
+i1
+[.0
+[F
+F
+I1
+].0
+]F
+s0

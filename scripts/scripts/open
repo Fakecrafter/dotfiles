@@ -1,0 +1,48 @@
+#!/bin/sh
+
+
+# mp4, mp3, pdf, docx, jpg, png, textfiles
+
+
+path1=$(find -L | fzf)
+
+
+
+echo $path1
+
+if [[ $path1 =~ \.mp3$ ]];
+then
+    ffplay -nodisp "$path1";
+elif [[ $path1 =~ \.m4a$ ]];
+then
+    ffplay -nodisp "$path1";
+elif [[ $path1 =~ \.mp4$ ]];
+then
+    mpv "$path1" & disown
+elif [[ $path1 =~ \.pdf$ ]];
+then
+    firefox "$path1" & disown
+elif [[ $path1 =~ \.docx$ ]];
+then
+    libreoffice "$path1" & disown
+elif [[ $path1 =~ \.doc$ ]];
+then
+    libreoffice "$path1" & disown
+elif [[ $path1 =~ \.odf$ ]];
+then
+    libreoffice "$path1" & disown
+elif [[ $path1 =~ \.jpg$ ]];
+then
+    sxiv "$path1" & disown
+elif [[ $path1 =~ \.jpeg$ ]];
+then
+    sxiv "$path1" & disown
+elif [[ $path1 =~ \.png$ ]];
+then
+    sxiv "$path1" & disown
+elif [[ $path1 =~ \.zip$ ]];
+then
+    unzip "$path1";
+else
+    lvim "$path1";
+fi

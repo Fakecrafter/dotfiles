@@ -1,0 +1,5 @@
+#!/bin/bash
+
+selection=$(ls $HOME/.password-store | cut -f1 -d '.' | rofi -dmenu)
+
+pass -c $selection

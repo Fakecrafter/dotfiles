@@ -1,0 +1,5 @@
+#!/bin/sh
+cd /home/fakecrafter/
+
+cd $(fzf | rev | cut -d/ -f2- | rev) # remove filename from the end
+
