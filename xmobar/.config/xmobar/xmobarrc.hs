@@ -2,7 +2,7 @@ Config { font = "xft:Iosevka Nerd Font:pixelsize=22:antialias=true:hinting=true"
        , additionalFonts = []
        , borderColor = "#282828"
        , border = FullB
-       , borderWidth = 3
+       , borderWidth = 0
        , bgColor = "#32302f"
        , fgColor = "#ebdbb2"
        , alpha = 255

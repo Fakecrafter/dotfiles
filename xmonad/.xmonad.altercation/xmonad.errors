@@ -1,0 +1,15 @@
+
+lib/XMonad/Actions/ConditionalKeys.hs:29:1: error:
+    Could not find module ‘XMonad’
+    Perhaps you meant DsMonad (needs flag -package-key ghc-8.10.7)
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+29 | import XMonad
+   | ^^^^^^^^^^^^^
+
+lib/XMonad/Actions/ConditionalKeys.hs:30:1: error:
+    Could not find module ‘XMonad.StackSet’
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+30 | import qualified XMonad.StackSet as W
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
