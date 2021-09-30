@@ -21,6 +21,7 @@ import XMonad.Layout.MultiColumns
 import XMonad.Layout.MagicFocus
 import XMonad.Layout.Gaps
 import XMonad.Layout.NoBorders
+import XMonad.Layout.NoFrillsDecoration
 
 
 --UTILS
@@ -56,37 +57,29 @@ import qualified Data.Map        as M
 
 myTerminal      = "alacritty"
 
--- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = False
 
--- Whether clicking on a window to focus also passes the click to the window
 myClickJustFocuses :: Bool
 myClickJustFocuses = True
 
--- Width of the window border in pixels.
---
 myBorderWidth   = 4
 
--- modMask lets you specify which modkey you want to use. The default
--- is mod1Mask ("left alt").  You may also consider using mod3Mask
--- ("right alt"), which does not conflict with emacs keybindings. The
--- "windows key" is usually mod4Mask.
---
 myModMask       = mod4Mask
 
 
---
--- A tagging example:
---
--- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
---
-myWorkspaces    = ["dev","www","sys","chat","vid","gfx","data","other"]
+myWorkspaces    = ["DEV","WEB","GEN","CHAT","vid","gfx","data","other"]
 
--- Border colors for unfocused and focused windows, respectively.
---
 myNormalBorderColor  = "#928374"
 myFocusedBorderColor = "#fb4934"
+
+myFont = "Iosevka Nerd Font"
+
+
+-- COLORS
+
+active = "#fb4934"
+unactive = "#928374"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -94,7 +87,7 @@ myFocusedBorderColor = "#fb4934"
 -- myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 myKeys = \c -> mkKeymap c $
 
-    [ ("M-<Return>", spawn $ XMonad.terminal c)
+    [ ("M-<Return>", spawn myTerminal)
 
 --ROFI and PROMPTS
     -- launch rofi
@@ -129,13 +122,11 @@ myKeys = \c -> mkKeymap c $
     , ("M-n", refresh)
 
 
-    -- Move focus to the next window
-    --, ((modm,               xK_Tab   ), windows W.focusDown)
 
 --SCRATCHPADS
 
-    , ("M-i d", namedScratchpadAction scratchpads "term")
-    , ("M-i f", namedScratchpadAction scratchpads "vifm")
+    , ("M-i M-d", namedScratchpadAction scratchpads "term")
+    , ("M-i M-f", namedScratchpadAction scratchpads "vifm")
     , ("M-i p", namedScratchpadAction scratchpads "pavucontrol")
     , ("M-i S-p", namedScratchpadAction scratchpads "periodensystem")
     , ("M-i c", namedScratchpadAction scratchpads "music")
@@ -198,19 +189,11 @@ myKeys = \c -> mkKeymap c $
 -- Mouse bindings: default actions bound to mouse events
 --
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
-
-    -- mod-button1, Set the window to floating mode and move by dragging
     [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w
                                        >> windows W.shiftMaster))
-
-    -- mod-button2, Raise the window to the top of the stack
     , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))
-
-    -- mod-button3, Set the window to floating mode and resize by dragging
     , ((modm, button3), (\w -> focus w >> mouseResizeWindow w
                                        >> windows W.shiftMaster))
-
-    -- you may also bind events to the mouse scroll wheel (button4 and button5)
     ]
 
 ------------------------------------------------------------------------
@@ -235,27 +218,28 @@ scratchpads = [
 ------------------------------------------------------------------------
 -- Layouts:
 
--- You can specify and transform your layouts by modifying these values.
--- If you change layout bindings be sure to use 'mod-shift-space' after
--- restarting (with 'mod-q') to reset your layout state to the new
--- defaults, as xmonad preserves your old layout settings by default.
---
--- The available layouts.  Note that each layout is separated by |||,
--- which denotes layout choice.
---
-myLayout = avoidStruts (Full ||| magicFocus (tiled) ||| tiled ||| Mirror tiled)
+topBarTheme = def
+    { fontName              = myFont
+    , inactiveBorderColor   = unactive
+    , inactiveColor         = unactive
+    , inactiveTextColor     = unactive
+    , activeBorderColor     = active
+    , activeColor           = active
+    , activeTextColor       = active
+    , urgentBorderColor     = unactive
+    , urgentTextColor       = unactive
+    , decoHeight            = 10
+    }
+
+
+myLayout = avoidStruts (Full ||| tiled)
   where
-     -- default tiling algorithm partitions the screen into two panes
-     tiled   = Tall nmaster delta ratio
 
-     -- The default number of windows in the master pane
-     nmaster = 1
 
-     -- Default proportion of screen occupied by master pane
-     ratio   = 70/100
-
-     -- Percent of screen to increment by when resizing panes
-     delta   = 4/100
+    masterwindows = 1
+    ratio   = 70/100
+    delta   = 4/100
+    tiled   = Tall masterwindows delta ratio
 
 ------------------------------------------------------------------------
 -- Window rules:
@@ -279,7 +263,6 @@ myManageHook = composeAll
     , className =? "discord"        --> doShift ( myWorkspaces !! 3 )
     , className =? "element"        --> doShift ( myWorkspaces !! 3 )
     , className =? "Gimp"           --> doFloat
-    , title =? "Hinzufügen"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
@@ -330,7 +313,6 @@ main = do
 --
 defaults = def {
       -- simple stuff
-        terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
         clickJustFocuses   = myClickJustFocuses,
         borderWidth        = myBorderWidth,

@@ -73,10 +73,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fakecrafter/.local/share/lunarvim/site/pack/packer/start/FixCursorHold.nvim"
   },
-  LuaSnip = {
-    loaded = true,
-    path = "/home/fakecrafter/.local/share/lunarvim/site/pack/packer/start/LuaSnip"
-  },
   ["barbar.nvim"] = {
     config = { "\27LJ\1\2=\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\20core.bufferline\frequire\0" },
     loaded = false,
@@ -118,10 +114,6 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     path = "/home/fakecrafter/.local/share/lunarvim/site/pack/packer/opt/gitsigns.nvim"
-  },
-  gruvbox = {
-    loaded = true,
-    path = "/home/fakecrafter/.local/share/lunarvim/site/pack/packer/start/gruvbox"
   },
   ["gruvbox-material"] = {
     loaded = true,
@@ -203,6 +195,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fakecrafter/.local/share/lunarvim/site/pack/packer/start/project.nvim"
   },
+  ["rust.vim"] = {
+    loaded = true,
+    path = "/home/fakecrafter/.local/share/lunarvim/site/pack/packer/start/rust.vim"
+  },
   ["telescope.nvim"] = {
     config = { "\27LJ\1\2<\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\19core.telescope\frequire\0" },
     loaded = true,
@@ -213,6 +209,14 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     path = "/home/fakecrafter/.local/share/lunarvim/site/pack/packer/opt/toggleterm.nvim"
+  },
+  ultisnips = {
+    loaded = true,
+    path = "/home/fakecrafter/.local/share/lunarvim/site/pack/packer/start/ultisnips"
+  },
+  ["vim-snippets"] = {
+    loaded = true,
+    path = "/home/fakecrafter/.local/share/lunarvim/site/pack/packer/start/vim-snippets"
   },
   ["which-key.nvim"] = {
     config = { "\27LJ\1\2<\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\19core.which-key\frequire\0" },

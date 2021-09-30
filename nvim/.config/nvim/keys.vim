@@ -22,6 +22,8 @@ nnoremap <leader>f :Vifm<return>
 nnoremap <leader>vs :VsplitVifm<return>
 "insert mode commands
 inoremap jj <Esc>
+inoremap kj <Esc>
+inoremap jk <Esc>
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 
@@ -35,5 +37,5 @@ tnoremap <TAB> <cmd>bn!<CR>
 tnoremap <S-TAB> <cmd>bp!<CR>
 
 
-nnoremap <leader>r <cmd>Cargo run<CR>i
+nnoremap <leader>x <cmd>Cargo run<CR>i
 

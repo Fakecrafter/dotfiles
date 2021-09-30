@@ -30,6 +30,7 @@ lvim.keys.normal_mode["<S-TAB>"] = ":bp!<cr>"
 -- end
 
 -- Use which-key to add extra bindings with the leader-key prefix
+lvim.builtin.which_key.mappings["x"] = { "<cmd>Cargo run<CR>i", "Compile" }
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
@@ -98,10 +99,12 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.plugins = {
   {"arcticicestudio/nord-vim"},
   {"sainnhe/gruvbox-material"},
-  {"morhetz/gruvbox"},
+  {"rust-lang/rust.vim"},
+  {"SirVer/ultisnips"},
+  {"honza/vim-snippets"},
 }
 
--- Autocommands (https://neovim.io/doc/user/autocmd.html)
+-- Autocommands (httpmorhetz/gruvboxs://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
 --   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 -- }
