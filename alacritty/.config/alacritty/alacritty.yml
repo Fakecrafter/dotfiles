@@ -100,7 +100,7 @@ colors:
     cyan:    '#89b482'
     white:   '#dfbf8e'
 
-background_opacity: 1.00
+background_opacity: 0.99
 
 
 cursor:

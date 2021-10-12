@@ -1,7 +1,7 @@
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
-lvim.format_on_save = true
+lvim.format_on_save = false
 lvim.lint_on_save = true
 lvim.colorscheme = "gruvbox-material"
 
@@ -102,6 +102,7 @@ lvim.plugins = {
   {"rust-lang/rust.vim"},
   {"SirVer/ultisnips"},
   {"honza/vim-snippets"},
+  {"vifm/vifm.vim"},
 }
 
 -- Autocommands (httpmorhetz/gruvboxs://neovim.io/doc/user/autocmd.html)

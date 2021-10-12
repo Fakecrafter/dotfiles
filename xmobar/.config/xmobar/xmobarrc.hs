@@ -1,4 +1,4 @@
-Config { font = "xft:Iosevka Nerd Font:pixelsize=22:antialias=true:hinting=true"
+Config { font = "xft:Iosevka Nerd Font:pixelsize=20:antialias=true:hinting=true"
        , additionalFonts = []
        , borderColor = "#282828"
        , border = FullB
@@ -23,9 +23,11 @@ Config { font = "xft:Iosevka Nerd Font:pixelsize=22:antialias=true:hinting=true"
                     , Run Date "%_d.%m.%Y - %H:%M:%S" "date" 10
                     , Run Locks 
                     , Run Kbd [("de-latin1", "DE"), ("de", "DE"), ("us", "US")]
+                    , Run UnsafeStdinReader
+                    , Run Com "screencast" ["status"] "screencast" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " <fc=#83a598>[%cpu%]</fc> <fc=#d3869b>[%memory%]</fc> <fc=#fb4934>%locks%</fc> } { <fc=#fb4934>[%date%]</fc> <fc=#b8bb26>[%whoami%]</fc> "
+       , template = " %UnsafeStdinReader% <fc=#fb4934>%locks%</fc> } {<fc=#83a598>[%cpu%]</fc> <fc=#d3869b>[%memory%]</fc> <fc=#fb4934>[%date%]</fc> "
        }
 

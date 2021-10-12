@@ -1,6 +1,8 @@
+{-# LANGUAGE AllowAmbiguousTypes, DeriveDataTypeable, TypeSynonymInstances, MultiParamTypeClasses #-}
 --IMPORTS
 
 import XMonad
+import XMonad.Config
 import Data.Monoid
 import System.Exit
 
@@ -19,9 +21,12 @@ import Control.Arrow (first)
 --LAYOUTS
 import XMonad.Layout.MultiColumns
 import XMonad.Layout.MagicFocus
+import XMonad.Layout.Renamed
 import XMonad.Layout.Gaps
+import XMonad.Layout.Spacing
 import XMonad.Layout.NoBorders
 import XMonad.Layout.NoFrillsDecoration
+import XMonad.Layout.Tabbed
 
 
 --UTILS
@@ -49,6 +54,38 @@ import qualified Data.Map        as M
 
 
 
+main = do
+    xmproc <- spawnPipe "dbus-launch xmobar -x 0 /home/fakecrafter/.config/xmobar/xmobarrc.hs"
+    xmonad $ docks def {
+      -- simple stuff
+        focusFollowsMouse  = myFocusFollowsMouse,
+        clickJustFocuses   = myClickJustFocuses,
+        borderWidth        = myBorderWidth,
+        modMask            = myModMask,
+        workspaces         = myWorkspaces,
+        normalBorderColor  = myNormalBorderColor,
+        focusedBorderColor = myFocusedBorderColor,
+
+      -- key bindings
+        keys               = myKeys,
+        mouseBindings      = myMouseBindings,
+
+      -- hooks, layouts
+        layoutHook         = myLayout,
+        manageHook         = myManageHook <+> namedScratchpadManageHook scratchpads,
+        handleEventHook    = myEventHook,
+        logHook            = dynamicLogWithPP $
+                    xmobarPP {
+                              ppCurrent = xmobarColor "#d65d0e" "" . wrap "[" "]"
+                            , ppHidden = xmobarColor "#fe8019" ""
+                            , ppHiddenNoWindows = xmobarColor "#a89984" ""
+                            , ppLayout = xmobarColor "#a89984" ""
+                            , ppTitle = const ""
+                            , ppSep = " - "
+                            , ppOutput = hPutStrLn xmproc
+                            },
+        startupHook        = myStartupHook
+    }
 
 
 
@@ -63,12 +100,12 @@ myFocusFollowsMouse = False
 myClickJustFocuses :: Bool
 myClickJustFocuses = True
 
-myBorderWidth   = 4
+myBorderWidth   = 2
 
 myModMask       = mod4Mask
 
 
-myWorkspaces    = ["DEV","WEB","GEN","CHAT","vid","gfx","data","other"]
+myWorkspaces    = ["DEV","WEB","GEN","CHAT","SYS","GFX"]
 
 myNormalBorderColor  = "#928374"
 myFocusedBorderColor = "#fb4934"
@@ -96,6 +133,7 @@ myKeys = \c -> mkKeymap c $
     , ("M-b", spawn "buku_run")
     , ("M-x", spawn "rofi -show power-menu -modi power-menu:rofi-power-menu")
     , ("M-s", spawn "rofi-screenshot")
+    , ("M-S-s", spawn "rofi-screenshot -s")
     , ("M-e", spawn "rofi -show emoji")
     , ("M-g", spawn "~/scripts/rofo-pass")
 
@@ -109,7 +147,6 @@ myKeys = \c -> mkKeymap c $
     -- close focused window
     , ("M-q", kill)
 
-    , ("M-z", spawn "echo hello")
      -- Rotate through the available layout algorithms
     , ("M-<Tab>", sendMessage NextLayout)
 
@@ -119,7 +156,6 @@ myKeys = \c -> mkKeymap c $
     , ("M-S-<Space>", setLayout $ XMonad.layoutHook c)
 
     -- Resize viewed windows to the correct size
-    , ("M-n", refresh)
 
 
 
@@ -138,10 +174,10 @@ myKeys = \c -> mkKeymap c $
     , ("M-k", windows W.focusUp  )
 
     -- Move focus to the master window
-    , ("M-m", windows W.focusMaster  )
+    , ("M-n", windows W.focusMaster  )
 
     -- Swap the focused window and the master window
-    , ("M-S-<Return>", windows W.swapMaster)
+    , ("M-m", windows W.swapMaster)
 
     -- Swap the focused window with the next window
     , ("M-S-j", windows W.swapDown  )
@@ -164,11 +200,7 @@ myKeys = \c -> mkKeymap c $
     -- Deincrement the number of windows in the master area
     , ("M-;", sendMessage (IncMasterN (-1)))
 
-    -- Toggle the status bar gap
-    -- Use this binding with avoidStruts from Hooks.ManageDocks.
-    -- See also the statusBar function from Hooks.DynamicLog.
-    --
-    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
+    , ("M-<Backspace>", sendMessage ToggleStruts)
 
     -- Quit xmonad
     , ("M-S-q", io (exitWith ExitSuccess))
@@ -216,30 +248,39 @@ scratchpads = [
   ]
 
 ------------------------------------------------------------------------
+
+
+    -- addTopBar = NoFrillsDeco shrinkText def
+    --   { fontName              = myFont
+    -- , inactiveBorderColor   = unactive
+    -- , inactiveColor         = unactive
+    -- , inactiveTextColor     = unactive
+    -- , activeBorderColor     = active
+    -- , activeColor           = active
+    -- , activeTextColor       = active
+    -- , urgentBorderColor     = unactive
+    -- , urgentTextColor       = unactive
+    -- , decoHeight            = 10
+    -- }
+
+
+
 -- Layouts:
 
-topBarTheme = def
-    { fontName              = myFont
-    , inactiveBorderColor   = unactive
-    , inactiveColor         = unactive
-    , inactiveTextColor     = unactive
-    , activeBorderColor     = active
-    , activeColor           = active
-    , activeTextColor       = active
-    , urgentBorderColor     = unactive
-    , urgentTextColor       = unactive
-    , decoHeight            = 10
-    }
 
+-- make functions for gaps and spacing 
+-- more layouts
+-- add top bar
 
-myLayout = avoidStruts (Full ||| tiled)
+myLayout = avoidStruts $ (tall ||| full)
   where
-
-
+    full = noBorders $ Full
+    magicTile = renamed [Replace "MagicTall"] $ magicFocus(tall)
+    tall   = renamed [Replace "Tall"] $ spacingRaw False (Border 4 4 4 4) True (Border 4 4 4 4) True $ gaps [(U,10), (R,10), (L,10), (D,10)] $ Tall masterwindows delta ratio
     masterwindows = 1
-    ratio   = 70/100
+    ratio   = 0.55
     delta   = 4/100
-    tiled   = Tall masterwindows delta ratio
+
 
 ------------------------------------------------------------------------
 -- Window rules:
@@ -283,7 +324,6 @@ myEventHook = mempty
 -- Perform an arbitrary action on each internal state change or X event.
 -- See the 'XMonad.Hooks.DynamicLog' extension for examples.
 --
-myLogHook = return ()
 
 ------------------------------------------------------------------------
 -- Startup hook
@@ -301,35 +341,4 @@ myStartupHook = do
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = do
-    xmproc <- spawnPipe "xmobar -x 0 /home/fakecrafter/.config/xmobar/xmobarrc.hs"
-    xmonad $ docks defaults
-
--- A structure containing your configuration settings, overriding
--- fields in the default config. Any you don't override, will
--- use the defaults defined in xmonad/XMonad/Config.hs
---
--- No need to modify this.
---
-defaults = def {
-      -- simple stuff
-        focusFollowsMouse  = myFocusFollowsMouse,
-        clickJustFocuses   = myClickJustFocuses,
-        borderWidth        = myBorderWidth,
-        modMask            = myModMask,
-        workspaces         = myWorkspaces,
-        normalBorderColor  = myNormalBorderColor,
-        focusedBorderColor = myFocusedBorderColor,
-
-      -- key bindings
-        keys               = myKeys,
-        mouseBindings      = myMouseBindings,
-
-      -- hooks, layouts
-        layoutHook         = myLayout,
-        manageHook         = insertPosition End Newer <+> myManageHook <+> namedScratchpadManageHook scratchpads,
-        handleEventHook    = myEventHook,
-        logHook            = myLogHook,
-        startupHook        = myStartupHook
-    }
 

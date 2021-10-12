@@ -222,7 +222,7 @@ alias merge="xrdb -merge ~/.Xresources"
 # Aliases for software managment
 # pacman or pm
 alias pacman='sudo pacman --color auto'
-alias update='sudo pacman -Syyu'
+alias update='sudo pacman -Syu'
 alias delete='sudo pacman -R'
 alias install='sudo pacman -S'
 
@@ -285,7 +285,7 @@ alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 alias jctl="journalctl -p 3 -xb"
 
 #know what you do in these files
-alias xme="lvim /home/fakecrafter/.xmonad/xmonad.hs"
+alias xme="nvim /home/fakecrafter/.xmonad/xmonad.hs"
 alias viconf="cd ~/.config/nvim"
 alias vm="vifm"
 alias vi="nvim"
