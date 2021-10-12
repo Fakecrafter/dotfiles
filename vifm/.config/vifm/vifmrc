@@ -12,7 +12,7 @@
 " you will need to change this setting.
 
 "den default editor auswählen
-set vicmd=lvim
+set vicmd=nvim
 " set vicmd=elvis\ -G\ termcap
 " set vicmd=vile
 
