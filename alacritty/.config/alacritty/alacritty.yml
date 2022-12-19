@@ -4,9 +4,11 @@ env:
 window:
   dynamic_title: true
 
+  opacity: 0.99
+
   padding:
-    x: 20
-    y: 20
+    x: 10
+    y: 10
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -23,16 +25,16 @@ scrolling:
 
 font:
   normal:
-    family: Iosevka
+    family: Cascadia Code
     style: Medium
   bold:
-    family: Iosevka
+    family: Cascadia Code
     style: Bold
   italic:
-    family: Iosevka
+    family: Cascadia Code
     style: Italic
   bold_italic:
-    family: Iosevka
+    family: Cascadia Code
     style: Bold Italic
 
   # Point size
@@ -50,7 +52,6 @@ font:
 
 draw_bold_text_with_bright_colors: false
 
-# Colors (Tomorrow Night Bright)
 colors:
   # Default colors
   primary:
@@ -100,7 +101,6 @@ colors:
     cyan:    '#89b482'
     white:   '#dfbf8e'
 
-background_opacity: 0.99
 
 
 cursor:

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+file=$(find $HOME ! -perm '111' -not -path './.*' -type f | dmenu -i -l 25)
+curl -F "file=@$file" 0x0.st | xclip -i -selection clipboard
+notify-send "link is copied to clipboard"

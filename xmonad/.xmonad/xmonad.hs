@@ -39,7 +39,7 @@ import XMonad.Util.NamedScratchpad
 --ACTIONS
 import XMonad.Actions.CopyWindow
 import XMonad.Actions.Submap
-
+import XMonad.Actions.CycleWS
 
 --HOOKS
 import XMonad.Hooks.ManageDocks
@@ -95,7 +95,7 @@ main = do
 myTerminal      = "alacritty"
 
 myFocusFollowsMouse :: Bool
-myFocusFollowsMouse = False
+myFocusFollowsMouse = True
 
 myClickJustFocuses :: Bool
 myClickJustFocuses = True
@@ -133,19 +133,18 @@ myKeys = \c -> mkKeymap c $
     , ("M-b", spawn "buku_run")
     , ("M-x", spawn "rofi -show power-menu -modi power-menu:rofi-power-menu")
     , ("M-s", spawn "rofi-screenshot")
-    , ("M-S-s", spawn "rofi-screenshot -s")
+    , ("M-S-s", spawn "scrot '/home/fakecrafter/Bilder/%d-%m-%Y_$wx$h.png' -e 'optipng $f'")
     , ("M-e", spawn "rofi -show emoji")
     , ("M-g", spawn "~/scripts/rofo-pass")
 
     -- launch firefox
     , ("M-w", spawn "firefox")
     -- play-pause music
-    , ("M-p s", spawn "playerctl --player=cmus play-pause; playerctl --player=spotify play-pause")
-    , ("M-p f", spawn "playerctl --player=firefox.instance3122 play-pause")
+    , ("M-p", spawn "playerctl --player=cmus play-pause")
 
 
     -- close focused window
-    , ("M-q", kill)
+    , ("M-q", sendMessage ToggleStruts)
 
      -- Rotate through the available layout algorithms
     , ("M-<Tab>", sendMessage NextLayout)
@@ -163,9 +162,9 @@ myKeys = \c -> mkKeymap c $
 
     , ("M-i M-d", namedScratchpadAction scratchpads "term")
     , ("M-i M-f", namedScratchpadAction scratchpads "vifm")
-    , ("M-i p", namedScratchpadAction scratchpads "pavucontrol")
+    , ("M-i M-p", namedScratchpadAction scratchpads "pavucontrol")
     , ("M-i S-p", namedScratchpadAction scratchpads "periodensystem")
-    , ("M-i c", namedScratchpadAction scratchpads "music")
+    , ("M-i M-m", namedScratchpadAction scratchpads "music")
 
     -- Move focus to the next window
     , ("M-j", windows W.focusDown)
@@ -195,12 +194,13 @@ myKeys = \c -> mkKeymap c $
     , ("M-t", withFocused $ windows . W.sink)
 
     -- Increment the number of windows in the master area
-    , ("M-,", sendMessage (IncMasterN 1))
+    , ("M-,", prevWS)
 
+    , ("M-.", nextWS)
     -- Deincrement the number of windows in the master area
     , ("M-;", sendMessage (IncMasterN (-1)))
 
-    , ("M-<Backspace>", sendMessage ToggleStruts)
+    , ("M-<Backspace>", kill)
 
     -- Quit xmonad
     , ("M-S-q", io (exitWith ExitSuccess))
@@ -235,16 +235,16 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 scratchpads :: [NamedScratchpad]
 scratchpads = [
 -- run htop in alacritty, find it by title, use default floating window placement
-    NS "term" "alacritty -t scratchpad -o background_opacity=0.8" (title =? "scratchpad")
+    NS "term" "alacritty -t scratchpad -o opacity=0.8" (title =? "scratchpad")
         (customFloating $ W.RationalRect (0/1) (2/3) (1/1) (1/3)),
-    NS "vifm" "alacritty -t vifm -o background_opacity=0.8 -e vifm" (title =? "vifm")
+    NS "vifm" "alacritty -t vifm -o opacity=0.8 -e vifm" (title =? "vifm")
         (customFloating $ W.RationalRect (1/6) (1/6) (4/6) (4/6)),
-    NS "pavucontrol" "alacritty -t pulsemixer -o background_opacity=0.8 -e pulsemixer" (title =? "pulsemixer")
-        (customFloating $ W.RationalRect (1/4) (1/4) (2/4) (2/4)),
+    NS "pavucontrol" "alacritty -t pulsemixer -o opacity=0.8 -e pulsemixer" (title =? "pulsemixer")
+        (customFloating $ W.RationalRect (2/4) (1/4) (2/4) (2/4)),
     NS "periodensystem" "sxiv ~/Bilder/Periodensystem.png" (title =? "sxiv")
         (customFloating $ W.RationalRect (1/4) (1/4) (2/4) (2/4)),
-    NS "music" "alacritty -t music -o background_opacity=0.8 -e cmus" (title =? "music")
-        (customFloating $ W.RationalRect (1/4) (1/4) (1/2) (1/2))
+    NS "music" "alacritty -t music -o opacity=0.8 -e cmus" (title =? "music")
+        (customFloating $ W.RationalRect (0/4) (1/4) (1/2) (1/2))
   ]
 
 ------------------------------------------------------------------------
@@ -268,15 +268,15 @@ scratchpads = [
 -- Layouts:
 
 
--- make functions for gaps and spacing 
+-- make functions for gaps and spacing
 -- more layouts
 -- add top bar
 
-myLayout = avoidStruts $ (tall ||| full)
+myLayout = avoidStruts $ (full ||| tall)
   where
     full = noBorders $ Full
     magicTile = renamed [Replace "MagicTall"] $ magicFocus(tall)
-    tall   = renamed [Replace "Tall"] $ spacingRaw False (Border 4 4 4 4) True (Border 4 4 4 4) True $ gaps [(U,10), (R,10), (L,10), (D,10)] $ Tall masterwindows delta ratio
+    tall   = renamed [Replace "Tall"] $ spacingRaw False (Border 4 4 4 4) True (Border 4 4 4 4) True $ gaps [(U,4), (R,4), (L,4), (D,4)] $ Tall masterwindows delta ratio
     masterwindows = 1
     ratio   = 0.55
     delta   = 4/100
@@ -333,7 +333,7 @@ myEventHook = mempty
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
-myStartupHook = do 
+myStartupHook = do
   spawn "feh --randomize --bg-fill $HOME/Bilder/Hintergrundbilder/gute/*"
 
 ------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-Config { font = "xft:Iosevka Nerd Font:pixelsize=20:antialias=true:hinting=true"
+Config { font = "xft:Cascadia Code:pixelsize=18:antialias=true:hinting=true"
        , additionalFonts = []
        , borderColor = "#282828"
        , border = FullB
@@ -6,7 +6,7 @@ Config { font = "xft:Iosevka Nerd Font:pixelsize=20:antialias=true:hinting=true"
        , bgColor = "#32302f"
        , fgColor = "#ebdbb2"
        , alpha = 255
-       , position = Top
+       , position = Bottom
        , textOffset = -1
        , iconOffset = -1
        , lowerOnStart = True
@@ -21,7 +21,7 @@ Config { font = "xft:Iosevka Nerd Font:pixelsize=20:antialias=true:hinting=true"
                     , Run Memory ["-t","RAM: <usedratio>%"] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
                     , Run Date "%_d.%m.%Y - %H:%M:%S" "date" 10
-                    , Run Locks 
+                    , Run Locks
                     , Run Kbd [("de-latin1", "DE"), ("de", "DE"), ("us", "US")]
                     , Run UnsafeStdinReader
                     , Run Com "screencast" ["status"] "screencast" 10

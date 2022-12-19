@@ -6,13 +6,13 @@
     selected-active-foreground:  var(background);
     lightfg:                     #fb4934;
     separatorcolor:              var(background);
-    /* urgent-foreground:           var(red); */
+    urgent-foreground:           var(lightfg);
     alternate-urgent-background: var(lightbg);
     lightbg:                     #ffffff;
     background-color:            rgba ( 0, 0, 0, 0 % );
     border-color:                var(foreground);
     normal-background:           var(background);
-    selected-urgent-background:  var(red);
+    selected-urgent-background:  var(lightbg);
     alternate-active-background: var(background);
     spacing:                     4;
     alternate-normal-foreground: var(foreground);
@@ -20,7 +20,7 @@
     selected-normal-foreground:  var(lightbg);
     active-foreground:           var(foreground);
     background:                  #282828;
-    selected-active-background:  var(blue);
+    selected-active-background:  var(lightbg);
     active-background:           var(background);
     selected-normal-background:  var(foreground);
     alternate-normal-background: var(background);
