@@ -6,9 +6,7 @@ alias l='exa'
 
 # fast cd
 alias jd='cd;cd $(fzf | rev | cut -d/ -f2- | rev)'
-alias cd..='cd ..'
-alias cod='cd ~/CODING'
-alias proj='cd ~/CODING/rpg'
+alias cod='cd ~/coding'
 
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
