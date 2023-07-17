@@ -272,7 +272,7 @@ scratchpads = [
 -- more layouts
 -- add top bar
 
-myLayout = avoidStruts $ (full ||| tall)
+myLayout = avoidStruts $ (full ||| simpleTabbed ||| tall)
   where
     full = noBorders $ Full
     magicTile = renamed [Replace "MagicTall"] $ magicFocus(tall)

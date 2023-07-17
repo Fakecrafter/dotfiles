@@ -44,5 +44,5 @@ elif [[ $path1 =~ \.zip$ ]];
 then
     unzip "$path1";
 else
-    lvim "$path1";
+    nvim "$path1";
 fi
