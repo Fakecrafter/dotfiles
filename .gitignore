@@ -1,4 +1,5 @@
 .zcompdump
+vifminfo.json
 vifminfo.*
 build.*/
 
