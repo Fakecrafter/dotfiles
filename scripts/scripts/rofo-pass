@@ -1,5 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 
-selection=$(ls $HOME/.password-store | cut -f1 -d '.' | rofi -dmenu)
+selection=$( find .password-store/ -name "*.gpg" -print | cut -b 17- | cut -f1 -d '.' | rofi -dmenu)
 
 pass -c $selection

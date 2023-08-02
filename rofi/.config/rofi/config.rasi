@@ -1,5 +1,5 @@
 configuration {
-	modi: "window,run,ssh,drun,calc";
+	modi: "window,run,ssh,drun";
 	font: "JetBrainsMono Nerd Font 16";
 	location: 0;
 	yoffset: 0;

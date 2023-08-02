@@ -130,12 +130,11 @@ myKeys = \c -> mkKeymap c $
     -- launch rofi
     , ("M-<Space>", spawn "rofi -show run")
     , ("M-c", spawn "rofi -show calc")
-    , ("M-b", spawn "buku_run")
     , ("M-x", spawn "rofi -show power-menu -modi power-menu:rofi-power-menu")
     , ("M-s", spawn "rofi-screenshot")
     , ("M-S-s", spawn "scrot '/home/fakecrafter/Bilder/%d-%m-%Y_$wx$h.png' -e 'optipng $f'")
     , ("M-e", spawn "rofi -show emoji")
-    , ("M-g", spawn "~/scripts/rofo-pass")
+    , ("M-g", spawn "/home/fakecrafter/scripts/rofo-pass")
 
     -- launch firefox
     , ("M-w", spawn "firefox")
