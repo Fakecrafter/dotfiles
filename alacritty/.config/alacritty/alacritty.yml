@@ -7,8 +7,8 @@ window:
   opacity: 0.99
 
   padding:
-    x: 0
-    y: 0
+    x: 5
+    y: 5
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -21,7 +21,7 @@ window:
 
 scrolling:
   history: 10000
-  multiplier: 1
+  multiplier: 2
 
 font:
   normal:
