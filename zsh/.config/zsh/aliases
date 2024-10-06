@@ -1,8 +1,8 @@
 # ls
-alias ls="exa"
-alias la="exa -a"
-alias ll="exa -l"
-alias lal="exa -al"
+alias ls="eza"
+alias la="eza -a"
+alias ll="eza -l"
+alias lal="eza -al"
 
 # git
 alias gs='git status'

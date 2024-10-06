@@ -6,35 +6,20 @@ import XMonad.Config
 import Data.Monoid
 import System.Exit
 
---PROMPTS
-import XMonad.Prompt
-import XMonad.Prompt.Input
-import XMonad.Prompt.FuzzyMatch
-import XMonad.Prompt.Man
-import XMonad.Prompt.Pass
-import XMonad.Prompt.Shell
-import XMonad.Prompt.Ssh
-import XMonad.Prompt.Unicode
-import XMonad.Prompt.XMonad
-import Control.Arrow (first)
-
 --LAYOUTS
-import XMonad.Layout.MultiColumns
-import XMonad.Layout.MagicFocus
-import XMonad.Layout.Renamed
+-- import XMonad.Layout.MultiColumns
+-- import XMonad.Layout.MagicFocus
+-- import XMonad.Layout.Renamed
 import XMonad.Layout.Gaps
 import XMonad.Layout.Spacing
 import XMonad.Layout.NoBorders
-import XMonad.Layout.NoFrillsDecoration
 import XMonad.Layout.Tabbed
-
 
 --UTILS
 import XMonad.Util.SpawnOnce
 import XMonad.Util.Run
 import XMonad.Util.EZConfig
 import XMonad.Util.NamedScratchpad
-
 
 --ACTIONS
 import XMonad.Actions.CopyWindow
@@ -46,12 +31,9 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.DynamicLog
 
-
 --OTHER
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
-
-
 
 
 main = do
@@ -105,7 +87,7 @@ myBorderWidth   = 2
 myModMask       = mod4Mask
 
 
-myWorkspaces    = ["DEV","WEB","GEN","CHAT","SYS","GFX"]
+myWorkspaces    = ["DEV","WEB","GEN","SYS","GFX"]
 
 myNormalBorderColor  = "#928374"
 myFocusedBorderColor = "#fb4934"
@@ -120,8 +102,7 @@ unactive = "#928374"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
---
--- myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
+
 myKeys = \c -> mkKeymap c $
 
     [ ("M-<Return>", spawn myTerminal)
@@ -129,13 +110,14 @@ myKeys = \c -> mkKeymap c $
 --ROFI and PROMPTS
     -- launch rofi
     , ("M-<Space>", spawn "rofi -show run")
-    , ("M-c", spawn "rofi -show calc")
+--    , ("M-c", spawn "rofi -show calc")
     , ("M-x", spawn "rofi -show power-menu -modi power-menu:rofi-power-menu")
-    , ("M-s", spawn "rofi-screenshot")
-    , ("M-S-s", spawn "scrot '/home/fakecrafter/Bilder/%d-%m-%Y_$wx$h.png' -e 'optipng $f'")
-    , ("M-e", spawn "rofi -show emoji")
-    , ("M-g", spawn "/home/fakecrafter/scripts/rofo-pass")
+    , ("M-s", spawn "/home/fakecrafter/bin/rofi-screenshot")
+--    , ("M-e", spawn "rofi -show emoji")
+    , ("M-g", spawn "/home/fakecrafter/bin/rofo-pass")
 
+    -- launch emacsclient
+    , ("M-e", spawn "emacsclient -c")
     -- launch firefox
     , ("M-w", spawn "firefox")
     -- play-pause music
@@ -233,49 +215,25 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 
 scratchpads :: [NamedScratchpad]
 scratchpads = [
--- run htop in alacritty, find it by title, use default floating window placement
-    NS "term" "alacritty -t scratchpad -o opacity=0.8" (title =? "scratchpad")
+    NS "term" "alacritty -t scratchpad" (title =? "scratchpad")
         (customFloating $ W.RationalRect (0/1) (2/3) (1/1) (1/3)),
-    NS "vifm" "alacritty -t vifm -o opacity=0.8 -e vifm" (title =? "vifm")
+    NS "vifm" "alacritty -t vifm -e vifm" (title =? "vifm")
         (customFloating $ W.RationalRect (1/6) (1/6) (4/6) (4/6)),
-    NS "pavucontrol" "alacritty -t pulsemixer -o opacity=0.8 -e pulsemixer" (title =? "pulsemixer")
+    NS "pavucontrol" "alacritty -t pulsemixer -e pulsemixer" (title =? "pulsemixer")
         (customFloating $ W.RationalRect (2/4) (1/4) (2/4) (2/4)),
     NS "periodensystem" "sxiv ~/Bilder/Periodensystem.png" (title =? "sxiv")
         (customFloating $ W.RationalRect (1/4) (1/4) (2/4) (2/4)),
-    NS "music" "alacritty -t music -o opacity=0.8 -e cmus" (title =? "music")
+    NS "music" "alacritty -t music -e cmus" (title =? "music")
         (customFloating $ W.RationalRect (0/4) (1/4) (1/2) (1/2))
   ]
 
 ------------------------------------------------------------------------
-
-
-    -- addTopBar = NoFrillsDeco shrinkText def
-    --   { fontName              = myFont
-    -- , inactiveBorderColor   = unactive
-    -- , inactiveColor         = unactive
-    -- , inactiveTextColor     = unactive
-    -- , activeBorderColor     = active
-    -- , activeColor           = active
-    -- , activeTextColor       = active
-    -- , urgentBorderColor     = unactive
-    -- , urgentTextColor       = unactive
-    -- , decoHeight            = 10
-    -- }
-
-
-
 -- Layouts:
-
-
--- make functions for gaps and spacing
--- more layouts
--- add top bar
 
 myLayout = avoidStruts $ (full ||| simpleTabbed ||| tall)
   where
     full = noBorders $ Full
-    magicTile = renamed [Replace "MagicTall"] $ magicFocus(tall)
-    tall   = renamed [Replace "Tall"] $ spacingRaw False (Border 4 4 4 4) True (Border 4 4 4 4) True $ gaps [(U,4), (R,4), (L,4), (D,4)] $ Tall masterwindows delta ratio
+    tall   = Tall masterwindows delta ratio
     masterwindows = 1
     ratio   = 0.55
     delta   = 4/100
@@ -318,26 +276,11 @@ myManageHook = composeAll
 myEventHook = mempty
 
 ------------------------------------------------------------------------
--- Status bars and logging
-
--- Perform an arbitrary action on each internal state change or X event.
--- See the 'XMonad.Hooks.DynamicLog' extension for examples.
---
-
-------------------------------------------------------------------------
 -- Startup hook
 
 -- Perform an arbitrary action each time xmonad starts or is restarted
 -- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize
 -- per-workspace layout choices.
 --
--- By default, do nothing.
 myStartupHook = do
   spawn "feh --randomize --bg-fill $HOME/Bilder/Hintergrundbilder/gute/*"
-
-------------------------------------------------------------------------
--- Now run xmonad with all the defaults we set up.
-
--- Run xmonad with the settings you specify. No need to modify this.
---
-

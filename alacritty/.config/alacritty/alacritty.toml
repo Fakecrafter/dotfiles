@@ -1,0 +1,157 @@
+live_config_reload = true
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[colors.bright]
+black = "#928374"
+blue = "#7daea3"
+cyan = "#89b482"
+green = "#a9b665"
+magenta = "#d3869b"
+red = "#ea6962"
+white = "#dfbf8e"
+yellow = "#e3a84e"
+
+[colors.cursor]
+cursor = "#d5c4a1"
+text = "#1d2021"
+
+[colors.dim]
+black = "#676f78"
+blue = "#707fd0"
+cyan = "#8adaf1"
+green = "#78a670"
+magenta = "#c583d0"
+red = "#b55454"
+white = "#e0e3e7"
+yellow = "#faf380"
+
+[colors.normal]
+black = "#665c54"
+blue = "#7daea3"
+cyan = "#89b482"
+green = "#a9b665"
+magenta = "#d3869b"
+red = "#ea6962"
+white = "#dfbf8e"
+yellow = "#e78a4e"
+
+[colors.primary]
+background = "#292828"
+foreground = "#dfbf8e"
+
+[colors.selection]
+background = "#d8dee9"
+text = "#191919"
+
+[colors.vi_mode_cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+vi_mode_style = "Block"
+
+[debug]
+log_level = "Warn"
+persistent_logging = false
+print_events = false
+render_timer = false
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 16.0
+
+[font.bold]
+family = "Cascadia Code"
+style = "Bold"
+
+[font.bold_italic]
+family = "Cascadia Code"
+style = "Bold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Cascadia Code"
+style = "Italic"
+
+[font.normal]
+family = "Cascadia Code"
+style = "Medium"
+
+[font.offset]
+x = -1
+y = -1
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "P"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "Insert"
+mods = "Shift"
+
+[[keyboard.bindings]]
+chars = "gc"
+key = "Slash"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "Y"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+# [[keyboard.bindings]]
+# action = "IncreaseFontSize"
+# key = "Plus"
+# mods = "Control"
+# 
+# [[keyboard.bindings]]
+# action = "DecreaseFontSize"
+# key = "Minus"
+# mods = "Control"
+
+[[mouse.bindings]]
+action = "Copy"
+mouse = "Middle"
+
+#[mouse.double_click]
+#threshold = 300
+
+#[mouse.hints.launcher]
+#program = "xdg-open"
+
+#[mouse.triple_click]
+#threshold = 300
+
+[scrolling]
+history = 10000
+multiplier = 2
+
+[window]
+dynamic_padding = false
+dynamic_title = true
+opacity = 0.99
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 5
+y = 5
