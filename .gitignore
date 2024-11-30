@@ -2,4 +2,6 @@
 vifminfo.json
 vifminfo.*
 build.*/
+*.json
+
 

@@ -4,6 +4,9 @@ alias la="eza -a"
 alias ll="eza -l"
 alias lal="eza -al"
 
+# sbcl
+alias sbcl="rlwrap -i -b '()' sbcl $*"
+
 # git
 alias gs='git status'
 alias ga='git add'
